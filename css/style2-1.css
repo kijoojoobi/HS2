@@ -1,0 +1,398 @@
+/*
+Colors used:
+Primary Color (Blue): #05676e;
+Secondary Color (Green): #489c79;
+*/
+* {
+  box-sizing: border-box;
+}
+header {
+  position: relative;
+  background-color: #F8F3F0;
+}
+
+body {
+  background-color: #F8F3F0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #4a4a4a;
+}
+footer {
+ background-color: #1d1f29;
+ padding-bottom: 500px;
+ padding-top: 100px;
+
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  color: #f0512c;
+  font-family: 'antic didone', serif;
+  font-size: 9em;
+  font-weight: 50;
+  position: absolute;
+  white-space: nowrap;
+}
+
+h1 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin-top: 80px;
+ margin-bottom:30px;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: scroll-left 15s linear infinite;
+ -webkit-animation: scroll-left 15s linear infinite;
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   {
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%);
+ }
+}
+
+p {
+  margin-right: 650px;
+  margin-top:0;
+}
+
+h2 {
+  font-size: 7.5em;
+  font-weight: 100;
+  position: absolute;
+  white-space: nowrap;
+}
+
+h3 {
+  font-size: 3em;
+  font-weight: 100;
+}
+h4 {
+  font-size: 1.7em;
+  font-weight: 100;
+}
+img {
+  width: 80%;
+}
+a {
+  color: #ff7f50;
+  text-decoration: none; /* No underlining */
+}
+a:visited { /* visited link */
+  color: #ff7f50;
+}
+a:hover,
+a:focus {
+  color: #cc6540;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+a:active { /* selected link */
+  color: #994c30;
+}
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #4a4a4a;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+}
+.button.contact {
+  background-color: transparent;
+  color: #ff7f50;
+  margin: 20px;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+.button.contact:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+/* Layout styling */
+.container {
+  padding: 100px 15px;
+}
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+.logo {
+  max-width: 180px;
+  display: block;
+  margin-left: 30px;
+  margin-right: 80px;
+}
+
+.page-title | title {
+  margin-right: 20px;
+}
+
+
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li > a {
+  padding: 0px 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #4a4a4a;
+  float: left;
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+}
+.navtoggle.responsive li  {
+  display: block;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: inline-block;
+  padding: 5px 0px;
+  border-top: .5px solid rgba(255,127,80,0.5);
+  border-bottom: .5px solid rgba(255,127,80,0.5);
+}
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+}
+
+.tile {
+	width: 35vw;
+	flex: 0 0 auto;
+}
+
+.tile__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+canvas {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 9;
+}
+
+#hero {
+
+  margin-left: -50px;
+  margin-bottom: 50px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+.center-2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+.center-3{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+#socialicons {
+  padding: 50px 0px;
+  display: inline-block;
+}
+#cb2 {
+  background-color: #000000;
+}
+
+#uidesign a {
+    display: block;
+  margin-top: 15px;
+}
+#uidesign {
+  margin-right: 550px;
+}
+#illustration img {
+  margin-top: 50px;
+ margin-bottom: 100px;
+ margin-right: 0;
+}
+#Belmont img {
+  margin-top: 50px;
+}
+#uidesign {
+  margin-top: 150px;
+  margin-bottom:400px;
+  margin-left: -100px;
+}
+#illustration {
+  margin-left: -100px;
+  margin-top: 700px;
+  margin-bottom: 100px;
+}
+#creativedirection{
+margin-right: 500px;
+margin-bottom: 800px;
+margin-top: 200px;
+}
+#contact {
+  padding-top:100px;
+  margin-top: 300px;
+  width: 1000px;
+}
+
+.container {
+  display: inline-block;
+}
+.manImg {
+  display: none;
+}
+.hover-text:hover ~ .manImg {
+  display: block;
+}
+
+      .slide {
+        width: 100vw;
+        height: 100vh;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 400vw;
+      }
+
+      .wrapper {
+      ...
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+      }
+      .outer-wrapper {
+        width: 100vh;
+        height: 100vw;
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: absolute;
+      }
+      #hero, #uidesign, #illustration, #creativedirection, #contact {
+       transform: rotate(90deg);
+     }
+
+     .outer-wrapper {
+     ...
+       scrollbar-width: none;
+       -ms-overflow-style: none;
+     }
+     ::-webkit-scrollbar {
+       display:none;
+     }
+
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 641px) {
+  header {
+    text-align: unset;
+    width: 100%;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  nav > ul {
+    margin:1em 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
+  .logo {
+    width: 240px;
+    margin-left: 30px;
+    margin-top: 32px;
+    float: left;
+  }
+  #hero span {
+  display: block;
+}
+.col-md-6 {
+  width: 50%;
+}
+[class*="col-"] {
+  float: left;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#aboutme h3 { margin-top: 0;}
+      }
